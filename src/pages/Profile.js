@@ -416,17 +416,14 @@ export default function Profile() {
                                                                     <label className="form-label">Language Spoken and Fluency</label>
                                                                     <Select
                                                                         isMulti
-                                                                        defaultValue={languagefluency[0]}
-                                                                        isClearable
-                                                                        isSearchable
+
                                                                         onInputChange={onInputChange}
                                                                         name="color"
                                                                         options={languagefluency}
-                                                                        menuIsOpen={menuIsOpen}
+
                                                                         onChange={addoptionvalue}
                                                                         placeholder={CurrentUser.languagespoken}
 
-                                                                        value={languagefluency.filter(obj => selectedValue.includes(obj.value))}
                                                                     />
                                                                 </div>
                                                             </div>
@@ -624,16 +621,13 @@ export default function Profile() {
                                                                     <Select
                                                                         isMulti
 
-                                                                        isClearable
-                                                                        isSearchable
                                                                         onInputChange={onInputChange}
                                                                         name="color"
                                                                         options={languagefluency}
-                                                                        menuIsOpen={menuIsOpen}
+
                                                                         onChange={addoptionvalue}
                                                                         placeholder={CurrentUser.languagespoken}
 
-                                                                        value={languagefluency.filter(obj => selectedValue.includes(obj.value))}
                                                                     />
                                                                 </div>
                                                             </div>

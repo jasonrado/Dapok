@@ -8,7 +8,7 @@ import { Modal } from 'react-bootstrap';
 import { colourOptions } from '../backend/data'
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
 import Select, { InputActionMeta } from 'react-select';
-import { LanguageFluency, languagefluency, educAttainment } from '../backend/data'
+import {  languagefluency, educAttainment } from '../backend/data'
 export default function Home() {
 
 
@@ -611,14 +611,13 @@ export default function Home() {
                                                 <div className="form-group mb-5">
                                                     <label className="form-label">Language Spoken and Fluency</label>
                                                     <Select
+
+
+
                                                         isMulti
-                                                        defaultValue={languagefluency[0]}
-                                                        isClearable
-                                                        isSearchable
-                                                        onInputChange={onInputChange}
-                                                        name="color"
+                                                        name="aria-live-color"
                                                         options={languagefluency}
-                                                        menuIsOpen={menuIsOpen}
+
                                                         onChange={addoptionvalue}
 
                                                         value={languagefluency.filter(obj => selectedValue.includes(obj.value))}
