@@ -77,8 +77,10 @@ export default function About() {
                         <div className="col-lg-6">
                             <div className="about-content">
                                 <h2 className="section-title">Project Dapok</h2>
-                                <p>Project Dapok aims to build a multilingual parallel corpus by incorporating the following:
-                                    <br></br>•Add crowdsourcing functionality to the application.
+                                <p style={{ fontSize: '32px' }}>Project Dapok aims to build a multilingual parallel corpus by incorporating the following:</p>
+
+                                <p style={{ fontSize: '18px' }}>
+                                    •Add crowdsourcing functionality to the application.
                                     <br></br>•Create a moderating module capable of controlling the monolingual data available in the mobile application, as well as analyzing crowdsourced contributions and determining how they align with other contributions presented in the web application.
                                     <br></br>•Finally, to improve the effectiveness of crowdsourcing language data, evaluate the user experience design.
 

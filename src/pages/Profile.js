@@ -239,19 +239,23 @@ export default function Profile() {
                             <ul className="sidebar-menu">
                                 <li className="sidebar-menu-item">
                                     {
-                                        <Link to="/contributions" className="sidebar-menu-link"><img src="assets/images/icon/menu1.png" alt="icon" />
+                                        <Link to="/contributions" className="sidebar-menu-link"> <img src="assets/images/icon/menu1.png" alt="icon" />
+                                            <div className="asd" style={{ color: '#f0f8ff', fontSize: '11px', fontFamily: 'Montserrat', fontWeight: '200' }}>Contributions</div>
                                         </Link>
                                     }
+
                                 </li>
                                 <li className="sidebar-menu-item">
                                     {
                                         <Link to="/tests" className="sidebar-menu-link"><img src="assets/images/icon/menu2.png" alt="icon" />
+                                            <div className="asd" style={{ color: '#f0f8ff', fontSize: '11px', fontFamily: 'Montserrat', fontWeight: '200' }}>Tests</div>
                                         </Link>
                                     }
                                 </li>
                                 <li className="sidebar-menu-item">
                                     {
                                         <Link to="/domain" className="sidebar-menu-link"> <img src="assets/images/icon/menu3.png" alt="icon" />
+                                            <div className="asd" style={{ color: '#f0f8ff', fontSize: '11px', fontFamily: 'Montserrat', fontWeight: '200' }}>Domains</div>
                                         </Link>
                                     }
                                 </li>
@@ -259,12 +263,14 @@ export default function Profile() {
                                 <li className="sidebar-menu-item">
                                     {
                                         <Link to="/lists" className="sidebar-menu-link"> <img src="assets/images/icon/menu5.png" alt="icon" />
+                                            <div className="asd" style={{ color: '#f0f8ff', fontSize: '11px', fontFamily: 'Montserrat', fontWeight: '200' }}>Lists</div>
                                         </Link>
                                     }
                                 </li>
                                 <li className="sidebar-menu-item">
                                     {
                                         <Link to="/profile" className="sidebar-menu-link"> <img src="assets/images/icon/menu6.png" alt="icon" />
+                                            <div className="asd" style={{ color: '#f0f8ff', fontSize: '11px', fontFamily: 'Montserrat', fontWeight: '200' }}>Profile</div>
                                         </Link>
                                     }
                                 </li>
@@ -455,19 +461,23 @@ export default function Profile() {
                             <ul className="sidebar-menu">
                                 <li className="sidebar-menu-item">
                                     {
-                                        <Link to="/contributions" className="sidebar-menu-link"><img src="assets/images/icon/menu1.png" alt="icon" />
+                                        <Link to="/contributions" className="sidebar-menu-link"> <img src="assets/images/icon/menu1.png" alt="icon" />
+                                            <div className="asd" style={{ color: '#f0f8ff', fontSize: '11px', fontFamily: 'Montserrat', fontWeight: '200' }}>Contributions</div>
                                         </Link>
                                     }
+
                                 </li>
                                 <li className="sidebar-menu-item">
                                     {
                                         <Link to="/tests" className="sidebar-menu-link"><img src="assets/images/icon/menu2.png" alt="icon" />
+                                            <div className="asd" style={{ color: '#f0f8ff', fontSize: '11px', fontFamily: 'Montserrat', fontWeight: '200' }}>Tests</div>
                                         </Link>
                                     }
                                 </li>
                                 <li className="sidebar-menu-item">
                                     {
                                         <Link to="/profile" className="sidebar-menu-link"> <img src="assets/images/icon/menu6.png" alt="icon" />
+                                            <div className="asd" style={{ color: '#f0f8ff', fontSize: '11px', fontFamily: 'Montserrat', fontWeight: '200' }}>Profile</div>
                                         </Link>
                                     }
                                 </li>
@@ -653,7 +663,7 @@ export default function Profile() {
             {
                 CurrentUser.usertype === 'Contributor' &&
                 <Link to="/" onClick={handleSubmit}>
-                    <h1>Please Access using the Mobile App </h1></Link>
+                    <h1>You are Unauthorized to use this Page, Please Click this to Logout</h1></Link>
             }
 
 

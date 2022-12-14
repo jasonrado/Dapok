@@ -139,9 +139,6 @@ export default function Home() {
             educattainment: selected,
             languagespoken: valuuue
         };
-        setIsModalTwoOpen(false)
-        setIsModalThreeOpen(true)
-        /*
 
         updateDoc(docRef, data)
             .then(docRef => {
@@ -153,7 +150,7 @@ export default function Home() {
             .catch(error => {
                 console.log(error);
             })
-*/
+
 
 
     }
@@ -646,7 +643,7 @@ export default function Home() {
                 <div onClick={handleClick}>
                     <div className="modal-dialog modal-dialog-centered modal-sm " style={{
 
-                        right: '10y%',
+                        right: '10%',
                         color: 'var(--bs-modal-color)',
                         pointerEvents: 'auto',
                         backgroundColor: '#3b252500',

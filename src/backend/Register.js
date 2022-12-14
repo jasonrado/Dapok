@@ -42,7 +42,7 @@ export const useSignup = () => {
                 })
 
                 setuid(user.uid)
-                dispatch({ payload: user })
+     
 
 
 
