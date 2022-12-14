@@ -61,37 +61,33 @@ export default function Faq() {
                         </div>
                         <div className={active2 ? 'faq-item active open' : 'faq-item'} onClick={() => setActive2(!active2)}>
                             <div className="faq-item__title">
-                                <h4 className="title">Where do all the contributions go?</h4>
+                                <h4 className="title">What are the modules of Dapok?</h4>
                             </div>
                             <div className="faq-item__content" >
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>● Contribute
+                                    <br></br>● Moderating modules (Filtration System and Sorting Algorithm)
+                                    <br></br>● Repository
+                                    <br></br>● Achievement
+
+                                </p>
                             </div>
                         </div>
                         <div className={active3 ? 'faq-item active open' : 'faq-item'} onClick={() => setActive3(!active3)}>
                             <div className="faq-item__title">
-                                <h4 className="title">How are contributions ranked?
+                                <h4 className="title">Who uses Dapok?
                                 </h4>
                             </div>
                             <div className="faq-item__content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>● <b>Contributors</b> are users that has access to the translate and contribute module. These users can contribute translations.
+
+                                    <br></br>● <b>Validators </b>are authorized users by the admin who can use or has access to the  contribute, and test repository modules. They are the ones who approves any data that goes into the system including contributions.These users can contribute too.
+
+                                    <br></br>● <b>Admin</b> are the super users that have access to all the modules in the system such as the User, Lists, and Domain Repository. They are the one who authorized users to become a Validator.
+
+                                </p>
                             </div>
                         </div>
-                        <div className={active4 ? 'faq-item active open' : 'faq-item'} onClick={() => setActive4(!active4)}>
-                            <div className="faq-item__title">
-                                <h4 className="title">How are the source text randomized?</h4>
-                            </div>
-                            <div className="faq-item__content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div className={active5 ? 'faq-item active open' : 'faq-item'} onClick={() => setActive5(!active5)}>
-                            <div className="faq-item__title">
-                                <h4 className="title">How are </h4>
-                            </div>
-                            <div className="faq-item__content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
+                       
                     </div>
                     <div className="body-wrapper-inner__right text-end align-self-end  d-lg-block d-none">
                         <img src="assets/images/thumb/faq.png" alt="thumb" className="mw-100" />

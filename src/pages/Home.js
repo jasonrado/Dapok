@@ -8,7 +8,7 @@ import { Modal } from 'react-bootstrap';
 import { colourOptions } from '../backend/data'
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
 import Select, { InputActionMeta } from 'react-select';
-import {  languagefluency, educAttainment } from '../backend/data'
+import { languagefluency, educAttainment } from '../backend/data'
 export default function Home() {
 
 
@@ -139,6 +139,9 @@ export default function Home() {
             educattainment: selected,
             languagespoken: valuuue
         };
+        setIsModalTwoOpen(false)
+        setIsModalThreeOpen(true)
+        /*
 
         updateDoc(docRef, data)
             .then(docRef => {
@@ -150,8 +153,7 @@ export default function Home() {
             .catch(error => {
                 console.log(error);
             })
-
-
+*/
 
 
     }
@@ -236,11 +238,7 @@ export default function Home() {
             });
     }
     const handleClick = (e) => {
-
-
-        window.location.reload(false);
-
-
+        setIsModalThreeOpen(false)
     }
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -333,10 +331,10 @@ export default function Home() {
                             className="title text--warning mb-4 pb-2" >DAPOK</h5>
                         <p className="mb-4 pb-3" style={{
                             fontFamily: 'Inter',
-                        }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        }}>
+                            <b>Dapok</b> was named after the Cebuano term  <b>"Tapok,"</b> which means "to gather or store in a specific location." The project's goal is to collect translation or contributions from the general public, or simply crowdsourcing,
+                            thus the name Dapok. In its initial release, the system will only involve languages from Filipino, Cebuano, Mandaya and vice versa.
+                        </p>
                         <div className="d-flex flex-wrap gap-3 gap-sm-4">
                             {
                                 user &&
@@ -636,13 +634,19 @@ export default function Home() {
                 </div>
 
             </Modal>
-            <Modal show={isModalThreeOpen} onHide={handleClick}>
+            <Modal show={isModalThreeOpen} onHide={handleClick} style={{
+
+                display: 'flex',
+                top: '20%',
+                width: '100%',
+                backgroundColor: '#fff0',
+
+            }}>
 
                 <div onClick={handleClick}>
-                    <div className="modal-dialog modal-dialog-centered modal-sm" style={{
-                        position: 'absolute',
-                        display: 'flex',
-                        width: '100%',
+                    <div className="modal-dialog modal-dialog-centered modal-sm " style={{
+
+                        right: '10y%',
                         color: 'var(--bs-modal-color)',
                         pointerEvents: 'auto',
                         backgroundColor: '#3b252500',
@@ -650,11 +654,13 @@ export default function Home() {
                         borderRadius: 'var(--bs-modal-border-radius)',
                         outline: '0'
                     }}>
-                        <div className="modal-content border-0 bg-transparent">
+                        <div className="modal-content border-0 bg-transparent" >
                             <div className="modal-body">
-                                <div className="success-message text-center">
-                                    <img src="assets/images/icon/arrow.png" alt="" className="icon mw-100" />
-                                    <p className="text">Your account have been created successfully!</p>
+                                <div className="success-message text-center" style={{ boxShadow: "none", width: '350px' }}>
+                                    <img src="assets/images/icon/arrow.png" alt="" className="icon mw-100   " />
+                                    <h3 className="text">Thank you for completing the registration! </h3>
+                                    <p className="text">Your registration is currently under review. You will receive an email once approved. <br></br><br></br> In the Mean time you can also use our mobile app and contribute.</p>
+
                                 </div>
                             </div>
                         </div>
