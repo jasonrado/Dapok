@@ -204,7 +204,7 @@ export default function Contributions() {
                                         <h4 className="title">Contributions</h4>
                                         <ul className="nav-tabs nav filter mt-2">
                                             <li className="nav-item"><a href="#approved-contributions" className="nav-link active" data-bs-toggle="tab">Approve Contributions</a></li>
-                                            <li className="nav-item"><a href="#all-contributions" className="nav-link" data-bs-toggle="tab">All Contributions</a></li>
+                                            <li className="nav-item"><a href="#all-contributions" className="nav-link" data-bs-toggle="tab">Translations</a></li>
 
                                         </ul>
                                     </div>
@@ -325,7 +325,7 @@ export default function Contributions() {
                                         <h4 className="title">Contributions</h4>
                                         <ul className="nav-tabs nav filter mt-2">
                                             <li className="nav-item"><a href="#approved-contributions" className="nav-link active" data-bs-toggle="tab">Approve Contributions</a></li>
-                                            <li className="nav-item"><a href="#all-contributions" className="nav-link" data-bs-toggle="tab">All Contributions</a></li>
+                                            <li className="nav-item"><a href="#all-contributions" className="nav-link" data-bs-toggle="tab">Translations</a></li>
 
                                         </ul>
                                     </div>
