@@ -258,7 +258,7 @@ export const Contributortable = ({ MenuItems }) => {
 
                         (
 
-                            menuItems2.map(({ id, firstname, lastname, languagespoken, educattainment }, index) => ((id === UserID) && (Status === "Pending")) ? (
+                            menuItems2.map(({ uid, firstname, lastname, languagespoken, educattainment }, index) => ((uid === UserID) && (Status === "Pending")) ? (
                                 (
 
                                     menuItems.map(({ uid, score, original_language, translated_language }, index) => ((uid === UserID) && (original_language == originallanguage) && (translated_language == translatedlanguage)) ?
