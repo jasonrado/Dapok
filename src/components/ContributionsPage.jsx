@@ -65,7 +65,7 @@ export const Contributortable = ({ MenuItems }) => {
             }
         );
 
-        const p = query(collection(db, 'users'));
+        const p = query(collection(db, 'users'), orderBy('uid', 'asc'));
         const getusers = onSnapshot(
             p,
             snapshot => {

@@ -45,7 +45,7 @@ export default function Contributions() {
             }
         })
 
-        const q = query(collection(db, 'contributions'), orderBy('RepoID', 'desc'), orderBy('UserID','desc'));
+        const q = query(collection(db, 'contributions'), orderBy('RepoID', 'desc'), orderBy('UserID','asc'));
         const unsubscribe = onSnapshot(
             q,
             snapshot => {
