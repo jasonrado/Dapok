@@ -252,16 +252,16 @@ export const Contributortable = ({ MenuItems }) => {
             </thead>
             <tbody>
                 {(
-                    menuItems.map(({ uid, score, original_language, translated_language }, index) =>
+                    MenuItems.map(({ id, UserID, originallanguage, originalsentence, translatedlanguage, translatedsentence, Contributor, Status, RepoID }, index) =>
                     (
 
 
                         (
 
-                            menuItems2.map(({ id, firstname, lastname, languagespoken, educattainment }, index) => ((uid === id)) ? (
+                            menuItems2.map(({ id, firstname, lastname, languagespoken, educattainment }, index) => ((id === UserID) && (Status === "Pending")) ? (
                                 (
 
-                                    MenuItems.map(({ id, UserID, originallanguage, originalsentence, translatedlanguage, translatedsentence, Contributor, Status, RepoID }, index) => ((uid === UserID) && (Status === "Pending") && (original_language == originallanguage) && (translated_language == translatedlanguage)) ?
+                                    menuItems.map(({ uid, score, original_language, translated_language }, index) => ((uid === UserID) && (original_language == originallanguage) && (translated_language == translatedlanguage)) ?
                                         (
                                             < tr key={index} className={`table-row ${selectedRow.id === id}`} >
 
@@ -343,6 +343,8 @@ export const Contributortable = ({ MenuItems }) => {
 
     );
 };
+
+
 export const AllContributions = ({ MenuItems }) => {
     const db = getFirestore();
     const auth = getAuth();
@@ -397,7 +399,7 @@ export const AllContributions = ({ MenuItems }) => {
             }
         );
 
-        const p = query(collection(db, 'users'), orderBy('uid', 'asc'));
+        const p = query(collection(db, 'users'), orderBy('uid', 'desc'));
         const getusers = onSnapshot(
             p,
             snapshot => {
