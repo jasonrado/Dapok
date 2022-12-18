@@ -173,7 +173,7 @@ export default function Home() {
         setValidationError2("")
         setEmail("")
         setPassword("")
-        login({ email, password })
+
 
 
         setsignupmodal(false)
@@ -236,6 +236,8 @@ export default function Home() {
     }
     const handleClick = (e) => {
         setIsModalThreeOpen(false)
+        setEmail("")
+        setPassword("");
     }
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
