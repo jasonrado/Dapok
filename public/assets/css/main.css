@@ -852,7 +852,7 @@ img,
     background-color: hsl(var(--success));
     border: 2px solid hsl(var(--success));
     color: hsl(var(--white));
-    
+
 }
 
 .btn--success:hover,
@@ -2978,5 +2978,29 @@ input:-webkit-autofill:focus {
     padding: 20px;
 }
 
+.fa-exclamation-circle {
+    font-size: 30px;
+    color: rgb(255, 0, 0);
+}
 
+.fa-exclamation-triangle {
+    font-size: 30px;
+    color: rgb(245, 8, 8);
+}
+
+.termsx {
+    overflow-y: scroll;
+    height: 350px;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+
+}
+
+.termsx p {
+    font-size: 15px;
+}
+.termsx h2{
+    font-size: 23px;
+}
 /*# sourceMappingURL=main.css.map */

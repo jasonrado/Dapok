@@ -20,7 +20,7 @@ export default function Home() {
     const [LoginModal, setLoginModal] = useState(false);
     const [forgotpassword, setforgotpassword] = useState(false);
     const [isModalThreeOpen, setIsModalThreeOpen] = useState(false);
-
+    const [termsandconditions, settermsandconditions] = useState(false);
 
     const db = getFirestore();
 
@@ -143,8 +143,9 @@ export default function Home() {
         updateDoc(docRef, data)
             .then(docRef => {
                 console.log("A New Document Field has been added to an existing document");
+                settermsandconditions(true)
                 setIsModalTwoOpen(false)
-                setIsModalThreeOpen(true)
+
 
             })
             .catch(error => {
@@ -179,6 +180,13 @@ export default function Home() {
         setsignupmodal(false)
         setIsModalTwoOpen(false)
         setLoginModal(true)
+    }
+    const showtermandcondition = (e) => {
+        settermsandconditions(true)
+    }
+    const showregistered = (e) => {
+        settermsandconditions(false)
+        setIsModalThreeOpen(true)
     }
     const closeloginmodal = (e) => {
         setLoginModal(false)
@@ -395,13 +403,13 @@ export default function Home() {
                                     </div>
                                     <div>
                                         {
-                                            validationError2 && <div className="text-center mt-3 mt-sm-4" >
-                                                {validationError2}
+                                            validationError2 && <div className="text-center mt-3 mt-sm-4" style={{ fontSize: '20px', color: 'red', fontWeight: 'bold' }}><i class='fas fa-exclamation-circle' />
+                                                {"   " + validationError2}
                                             </div>
                                         }
                                         {
-                                            error2 && <div className="text-center mt-3 mt-sm-4" >
-                                                {error2}
+                                            error2 && <div className="text-center mt-3 mt-sm-4" style={{ fontSize: '2   0px', color: 'red', fontWeight: 'bold' }}><i class='fas fa-exclamation-circle' />
+                                                {"   " + error2}
                                             </div>
                                         }
 
@@ -555,7 +563,76 @@ export default function Home() {
 
             </Modal>
 
+            <Modal show={termsandconditions} fade="false" animation="false" style={{
+                top: '10%'
+            }} onClose={() => settermsandconditions(false)}>
 
+                <div className="modal-dialog-centered modal-xl " style={{
+                    width: '1196px',
+                    position: 'absolute',
+                    left: '-75%',
+
+                }}>
+                    <div className="modal-content" >
+                        <div className="modal-content border-0">
+                            <div className="modal-body p-0 ">
+                                <div className="account-wrapper d-flex">
+                                    <div className="account-wrapper__left">
+                                        <div className="login-thumb">
+                                            <img src="assets/images/thumb/sign-up.png" alt="thumb" />
+                                            <div className="thumb-content">
+                                                <h2 className="title mb-1 text-white">Terms and Conditions</h2>
+                                                <p className="pb-40 text-white" >Before you continue</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="account-wrapper__right">
+                                        <form>
+                                            <div className="tab">
+                                                <div className="form-header text-center">
+                                                    <h4 className="title">Terms and Conditions</h4>
+                                                    <p className="mb-4">By checking the box below, you are bound to agree on these following terms and conditions.</p>
+                                                </div>
+                                                <div class="termsx">
+                                                    <p>- Gathering of data for evaluation and analysis; Personal information, such as Name, Email, and Education Attainment.</p>
+                                                    <h2>About the Study DAPOK: A MULTI-PLATFORM MULTILINGUAL PARALLEL CORPUS APPLICATION</h2>
+                                                    <br></br>
+                                                    <p>- aims to build a multilingual parallel corpus by: - incorporating a crowdsourcing functionality to the application.</p>
+                                                    <p>- design a moderating module that would be able to control the monolingual data that will be available in the mobile application,
+                                                        as well as to analyze the contributions from crowdsourcing and assess how they align with other contributions with the web application.
+                                                    </p>
+                                                    <p>- and lastly evaluate the user experience design to increase the effectiveness of crowdsourcing language data.</p>
+                                                    <h2>Terms and Conditions</h2>
+                                                    <br></br>
+                                                    <p>Due to the heavy reliance on online presence, the study's main threats are unlawfully access of data. Though, the proponents utilized
+                                                        and vetted technology that can guarantee utmost privacy and security.
+                                                    </p>
+                                                    <h2>Data Privacy</h2>
+                                                    <br></br>
+                                                    <p>To ensure the non-violation of data privacy and protect user rights or welfare, the researchers adhere to the Data Privacy Act
+                                                        (RA 10173). Therefore, all information gathered is kept in strict confidentiality, if deemed necessary, and will only be used for
+                                                        research purposes.
+                                                    </p>
+                                                    <h2>Voluntary Participation</h2>
+                                                    <br></br>
+                                                    <p>All the participation that occurred and will occur for the study will be voluntary and can only proceed if the participants agreed
+                                                        to partake in. The participant will also have the right to withdraw at any given time without any need to explain their withdrawal.
+                                                    </p>
+                                                </div>
+                                                <div className="text-center mt-5 pt-4">
+                                                    <button type="button" className="btn btn--accent" onClick={() => showregistered()}>Accept</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </Modal>
 
 
 
